@@ -36,7 +36,7 @@ class LowercaseSentenceTokenizerTest {
         Scanner scanner = new Scanner("    Hello     there     is      a     lot   of    spaces   in  this  sentence     ");
         List<String> tokens = tokenizer.tokenize(scanner);
 
-        assertEquals(List.of("Hello", "there", "is", "a", "lot", "of", "spaces", "in", "this", "sentence"), tokens);
+        assertEquals(List.of("hello", "there", "is", "a", "lot", "of", "spaces", "in", "this", "sentence"), tokens);
     }
 
     // Wave 3
