@@ -44,6 +44,13 @@ public class LowercaseSentenceTokenizer implements Tokenizer {
           tokens.add(word);
           tokens.add(".");
         }
+      } else if(word.charAt(word.length() - 1) == '?') {
+        int endIndex = word.length() - 1;
+        if(word.charAt(endIndex) == '?') {
+          word = word.substring(0, endIndex);
+          tokens.add(word);
+          tokens.add("?");
+        }
       } else {
         tokens.add(word);
       }
