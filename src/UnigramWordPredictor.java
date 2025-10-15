@@ -114,6 +114,8 @@ public class UnigramWordPredictor implements WordPredictor {
     // Hint: only the last word in context should be looked at
     String lastWord = context.get(context.size() - 1);
     
+
+    //Observed frequency of 'cat' after 'the' was 1.0, expected 0.6666666666666666 but why 
     if(neighborMap.containsKey(lastWord)) {
       List<String> nextword = neighborMap.get(lastWord);
       int rand = (int) Math.random() * nextword.size();
